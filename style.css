@@ -1,0 +1,55 @@
+body {
+  font-family: "PingFang TC", "Noto Sans TC", sans-serif;
+  margin: 0;
+  background: #f4f7fb;
+  line-height: 1.8;
+}
+
+header {
+  background: #4a90e2;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  background: white;
+  color: #4a90e2;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.day {
+  background: white;
+  margin: 16px;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.day h2 {
+  color: #333;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.item {
+  margin-bottom: 14px;
+  font-size: 18px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
