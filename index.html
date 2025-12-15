@@ -1,207 +1,162 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🧳 新竹大家庭・宜蘭快樂遊</title>
-    <style>
-        body {
-            font-family: 'Noto Serif TC', 'Noto Sans TC', serif;
-            background-color: #fdf6f0;
-            background-image: url('https://media.istockphoto.com/id/1074682564/photo/hand-made-japanese-traditional-paper-washi-texture.jpg?s=612x612&w=0&k=20&c=MJC94Edr6sjLeRovV4jOQ6KbXk8Q-w_0O_iUiXQi6KM=');
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-            color: #333;
-            margin: 0;
-            padding: 30px 15px;
-            line-height: 2;
-            min-height: 100vh;
-        }
-        h1 {
-            text-align: center;
-            font-size: 2.6em;
-            color: #5d4037;
-            margin-bottom: 10px;
-            font-weight: 700;
-            letter-spacing: 4px;
-        }
-        .date {
-            text-align: center;
-            font-size: 1.9em;
-            color: #8d6e63;
-            margin-bottom: 40px;
-        }
-        .day-section {
-            background-color: rgba(255, 255, 255, 0.90);
-            border-radius: 18px;
-            padding: 25px 20px;
-            margin-bottom: 50px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-            border: 1px solid #e8ded6;
-        }
-        h2 {
-            text-align: center;
-            font-size: 2.2em;
-            color: #6d4c41;
-            margin-bottom: 30px;
-            position: relative;
-        }
-        h2::after {
-            content: '';
-            display: block;
-            width: 90px;
-            height: 2px;
-            background: #d7ccc8;
-            margin: 15px auto;
-            border-radius: 2px;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li {
-            font-size: 1.7em;
-            margin: 22px 0;
-            padding-left: 10px;
-            border-bottom: 1px dotted #c0b0a0;
-        }
-        .emoji {
-            margin-right: 18px;
-            font-size: 1.2em;
-        }
-        .rain {
-            color: #455a64;
-            font-style: italic;
-            margin-left: 55px;
-            font-size: 0.82em;
-            display: block;
-            margin-top: 8px;
-        }
-        .footer {
-            text-align: center;
-            font-size: 1.6em;
-            color: #6d4c41;
-            margin-top: 60px;
-            font-style: italic;
-        }
-        .detail-btn {
-            display: block;
-            text-align: center;
-            margin: 30px auto 10px;
-            padding: 12px 30px;
-            font-size: 1.6em;
-            background-color: #8d6e63;
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            width: fit-content;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-        }
-        .detail-btn:hover {
-            background-color: #6d4c41;
-        }
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>宜蘭快樂遊｜詳細行程</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 導航按鈕 */
+    .map-btn {
+      display: inline-block;
+      margin-left: 1em;
+      margin-top: 0.3em;
+      padding: 0.3em 0.6em;
+      background-color: #cce4f6;
+      color: #000;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.9em;
+      transition: background-color 0.3s;
+    }
+    .map-btn:hover {
+      background-color: #8ec0dc;
+    }
 
-        /* 行動裝置進一步優化，尤其是小螢幕如 iPhone XS */
-        @media (max-width: 768px) {
-            body {
-                padding: 20px 10px;
-            }
-            h1 {
-                font-size: 2.3em;
-                letter-spacing: 3px;
-            }
-            .date {
-                font-size: 1.7em;
-            }
-            .day-section {
-                padding: 20px 15px;
-                margin-bottom: 40px;
-            }
-            h2 {
-                font-size: 2em;
-            }
-            li {
-                font-size: 1.55em;
-                margin: 20px 0;
-            }
-            .emoji {
-                margin-right: 12px;
-            }
-            .rain {
-                margin-left: 45px;
-                font-size: 0.85em;
-            }
-            .detail-btn {
-                font-size: 1.5em;
-                padding: 10px 25px;
-            }
-        }
+    /* 雨天備案樣式（莫蘭迪藍） */
+    .rainy {
+      margin-left: 2em;              /* 再縮排一層 */
+      margin-top: 0.3em;
+      color: #6b8ba4;                 /* 莫蘭迪藍 */
+      font-style: italic;
+      font-size: 0.9em;
+    }
 
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 2.1em;
-            }
-            .date {
-                font-size: 1.6em;
-            }
-            h2 {
-                font-size: 1.9em;
-            }
-            li {
-                font-size: 1.45em;
-            }
-            .rain {
-                margin-left: 35px;
-            }
-        }
-    </style>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
+    .day h2 {
+      font-size: 1.3em;
+      margin-bottom: 0.5em;
+    }
+
+    .item {
+      margin-bottom: 1.2em;
+    }
+  </style>
 </head>
 <body>
-    <h1>🧳 新竹大家庭・宜蘭快樂遊</h1>
-    <p class="date">2026 / 1 / 24（六）– 1 / 26（一）</p>
 
-    <div class="day-section">
-        <h2>📍 第一天｜1/24（六）</h2>
-        <ul>
-            <li><span class="emoji">🍳</span> 早餐：各自家中吃飽飽</li>
-            <li><span class="emoji">🚗</span> 上午行程：新竹出發前往宜蘭</li>
-            <li><span class="emoji">🍱</span> 午餐：恒瑜家（午餐＋下午茶）</li>
-            <li><span class="emoji">🏠</span> 下午行程：微圍住民宿 Check-in</li>
-            <li><span class="emoji">🌊</span> 傍晚行程：壯圍沙丘、海邊看龜山島
-                <span class="rain">🌧 雨天備案：金車噶瑪蘭威士忌酒廠</span>
-            </li>
-            <li><span class="emoji">🍽</span> 晚餐：南橋282（桌菜）</li>
-            <li><span class="emoji">💬</span> 晚上：回民宿聊天、休息</li>
-        </ul>
+<header>
+  <h1>📘 宜蘭快樂遊｜詳細執行行程</h1>
+  <a class="btn" href="index.html">回行程總覽</a>
+</header>
+
+<!-- ================= Day 1 ================= -->
+<section class="day">
+  <h2>📍 Day 1｜1/24（六）</h2>
+
+  <div class="item" id="hengyu">
+    <strong>11:00 恒瑜家（午餐＋下午茶）</strong><br>
+    各自前往，吃飯聊天休息
+  </div>
+
+  <div class="item" id="weiwei">
+    <strong>15:00 微圍住民宿 Check-in</strong><br>
+    <a class="map-btn" href="https://maps.app.goo.gl/wrhvyvm6R2vgBEGB8?g_st=ipc" target="_blank">
+      🧭 導航到微圍住請按我
+    </a>
+  </div>
+
+  <div class="item" id="zhuangwei">
+    <strong>16:00 壯圍沙丘＋海邊（看龜山島）</strong><br>
+    <a class="map-btn" href="https://maps.app.goo.gl/H8zSyo1i7H5sjc816?g_st=ipc" target="_blank">
+      🧭 導航到壯圍沙丘請按我
+    </a>
+    <div class="rainy">
+      🌧 雨天備案：金車噶瑪蘭威士忌酒廠
+      <a class="map-btn" href="https://maps.app.goo.gl/5RVUVt1PZPzXdgCh6?g_st=ipc" target="_blank">
+        導航
+      </a>
     </div>
+  </div>
 
-    <div class="day-section">
-        <h2>📍 第二天｜1/25（日）</h2>
-        <ul>
-            <li><span class="emoji">🍳</span> 早餐：民宿早餐</li>
-            <li><span class="emoji">🛕</span> 上午行程：北后寺參拜</li>
-            <li><span class="emoji">☕</span> 午餐：佛光大學雲起咖啡館</li>
-            <li><span class="emoji">🌿</span> 下午行程：龍潭湖散步
-                <span class="rain">🌧 雨天備案：亞典果子工廠</span>
-            </li>
-            <li><span class="emoji">🍵</span> 下午茶：湖畔茶屋／悠活園區</li>
-            <li><span class="emoji">🍜</span> 晚餐：八寶冬粉</li>
-            <li><span class="emoji">🚶</span> 晚上：礁溪自由活動或回民宿休息</li>
-        </ul>
+  <div class="item" id="nanqiao">
+    <strong>17:30 南橋282（桌菜晚餐）</strong><br>
+    <a class="map-btn" href="https://maps.app.goo.gl/6vs8sjKvg8sP2ucG6?g_st=ipc" target="_blank">
+      🧭 導航到南橋282請按我
+    </a>
+  </div>
+
+  <div class="item">
+    <strong>20:00 回民宿聊天</strong>
+  </div>
+
+  <div class="item">
+    <strong>23:00 晚安</strong>
+  </div>
+</section>
+
+<!-- ================= Day 2 ================= -->
+<section class="day">
+  <h2>📍 Day 2｜1/25（日）</h2>
+
+  <div class="item" id="beihou">
+    <strong>10:30 北后寺</strong><br>
+    <a class="map-btn" href="https://maps.app.goo.gl/EzgYGX99HXV8B9NSA?g_st=ipc" target="_blank">
+      🧭 導航到北后寺請按我
+    </a>
+  </div>
+
+  <div class="item" id="yunqi">
+    <strong>12:00 佛光大學雲起咖啡館</strong><br>
+    <a class="map-btn" href="https://maps.app.goo.gl/1A76sZW1kxBu7mhf7?g_st=ipc" target="_blank">
+      🧭 導航到雲起咖啡請按我
+    </a>
+  </div>
+
+  <div class="item" id="longtan">
+    <strong>13:30 龍潭湖</strong><br>
+    <a class="map-btn" href="https://maps.app.goo.gl/Yy8k25UR1BWuvtSE9?g_st=ipc" target="_blank">
+      🧭 導航到龍潭湖請按我
+    </a>
+    <div class="rainy">
+      🌧 雨天備案：亞典果子工廠
+      <a class="map-btn" href="https://maps.app.goo.gl/DQ3mJ9H51r7d935y8?g_st=ipc" target="_blank">
+        導航
+      </a>
     </div>
+  </div>
 
-    <div class="day-section">
-        <h2>📍 第三天｜1/26（一）</h2>
-        <ul>
-            <li><span class="emoji">🍳</span> 早餐：民宿早餐</li>
-            <li><span class="emoji">🏡</span> 上午行程：收拾行李，返回新竹</li>
-        </ul>
-    </div>
+  <div class="item" id="babao">
+    <strong>17:30 八寶冬粉</strong><br>
+    <a class="map-btn" href="https://maps.app.goo.gl/V6ExUtTaeops338eA?g_st=ipc" target="_blank">
+      🧭 導航到八寶冬粉請按我
+    </a>
+  </div>
 
-    <a href="https://yarralin.github.io/yilan-family-trip/index.html" class="detail-btn">📘 查看詳細行程</a>
+  <div class="item">
+    <strong>20:00 回民宿聊天</strong>
+  </div>
 
-    <p class="footer">大家開心出遊，平安歸來！🚗💨</p>
+  <div class="item">
+    <strong>23:00 晚安</strong>
+  </div>
+</section>
+
+<!-- ================= Day 3 ================= -->
+<section class="day">
+  <h2>📍 Day 3｜1/26（一）</h2>
+
+  <div class="item">
+    <strong>08:30 早餐</strong>
+  </div>
+
+  <div class="item">
+    <strong>10:00 出發回新竹</strong>
+  </div>
+</section>
+
+<footer>
+  <p>🚌 行程照表操課，下雨也很優雅</p>
+</footer>
+
 </body>
 </html>
