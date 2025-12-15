@@ -1,73 +1,108 @@
+/* ===== 全站基礎設定 ===== */
 body {
-  font-family: "PingFang TC", "Noto Sans TC", sans-serif;
   margin: 0;
-  background: #f4f7fb;
-  line-height: 1.8;
+  font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC",
+               "Hiragino Sans", "Yu Gothic", sans-serif;
+  background-color: #f7f8f6;   /* 米白灰 */
+  color: #2f3e46;              /* 深灰藍 */
+  line-height: 1.7;
 }
 
+/* ===== Header ===== */
 header {
-  background: #4a90e2;
-  color: white;
+  background-color: #e6ebe7;   /* 淡灰綠莫蘭迪 */
+  padding: 1.5em 1em;
   text-align: center;
-  padding: 20px;
 }
 
-h1 {
+header h1 {
   margin: 0;
-  font-size: 28px;
+  font-size: 1.6em;
+  font-weight: 600;
 }
 
+header p {
+  margin: 0.4em 0 1em;
+  color: #5f6f73;
+  font-size: 0.95em;
+}
+
+/* ===== 主按鈕 ===== */
 .btn {
   display: inline-block;
-  margin-top: 10px;
-  padding: 10px 16px;
-  background: white;
-  color: #4a90e2;
-  border-radius: 8px;
+  padding: 0.4em 1em;
+  border: 1px solid #9fb6ac;
+  border-radius: 999px;
+  color: #4f6f64;
   text-decoration: none;
-  font-weight: bold;
+  font-size: 0.9em;
+  background-color: transparent;
 }
 
+.btn:hover {
+  background-color: #eef2ef;
+}
+
+/* ===== 每日區塊 ===== */
 .day {
-  background: white;
-  margin: 16px;
-  padding: 16px;
-  border-radius: 12px;
+  padding: 1.2em 1.4em;
+  border-bottom: 1px solid #dde3df;
 }
 
 .day h2 {
-  color: #333;
+  font-size: 1.25em;
+  font-weight: 500;
+  margin-bottom: 0.6em;
+  color: #344e41;
 }
 
-ul {
-  padding-left: 20px;
+/* ===== 列表 ===== */
+.place-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
+.place-list li {
+  margin-bottom: 0.5em;
+}
+
+/* ===== 詳細頁 item ===== */
 .item {
-  margin-bottom: 14px;
-  font-size: 18px;
+  margin-bottom: 1.3em;
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  color: #666;
-}
-
+/* ===== 導航按鈕（極簡） ===== */
 .map-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 6px;
-  padding: 8px 12px;
-  background: #4a90e2;
-  color: #fff;
-  border-radius: 20px;
+  display: inline-block;
+  margin-left: 1.2em;
+  margin-top: 0.3em;
+  padding: 0.2em 0.6em;
+  border: 1px solid #c2d1cb;
+  color: #6b8ba4;
+  background-color: transparent;
+  border-radius: 4px;
+  font-size: 0.85em;
   text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
 }
 
 .map-btn:hover {
-  background: #357abd;
+  background-color: #eef4f1;
+}
+
+/* ===== 雨天備案 ===== */
+.rainy {
+  margin-left: 2em;
+  margin-top: 0.3em;
+  color: #6b8ba4;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 1.2em;
+  font-size: 0.85em;
+  color: #7a8a8f;
 }
