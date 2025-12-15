@@ -1,161 +1,74 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>宜蘭快樂遊｜詳細行程</title>
+  <title>新竹大家庭・宜蘭快樂遊</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* 導航按鈕 */
-    .map-btn {
-      display: inline-block;
-      margin-left: 1em;
-      margin-top: 0.3em;
-      padding: 0.3em 0.6em;
-      background-color: #cce4f6;
-      color: #000;
-      text-decoration: none;
-      border-radius: 4px;
-      font-size: 0.9em;
-      transition: background-color 0.3s;
-    }
-    .map-btn:hover {
-      background-color: #8ec0dc;
-    }
-
-    /* 雨天備案樣式（莫蘭迪藍） */
+    /* 首頁雨天備案樣式 */
     .rainy {
-      margin-left: 2em;              /* 再縮排一層 */
+      margin-left: 2em;        /* 縮排區分 */
       margin-top: 0.3em;
-      color: #6b8ba4;                 /* 莫蘭迪藍 */
+      color: #6b8ba4;          /* 莫蘭迪藍 */
       font-style: italic;
       font-size: 0.9em;
-    }
-
-    .day h2 {
-      font-size: 1.3em;
-      margin-bottom: 0.5em;
-    }
-
-    .item {
-      margin-bottom: 1.2em;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>📘 宜蘭快樂遊｜詳細執行行程</h1>
-  <a class="btn" href="index.html">回行程總覽</a>
+  <h1>新竹大家庭・宜蘭快樂遊</h1>
+  <p>2026 / 1 / 24（六）– 1 / 26（一）</p>
+  <a class="btn" href="detail.html">📘 查看詳細行程</a>
 </header>
 
-<!-- ================= Day 1 ================= -->
+<!-- ================= 第一天 ================= -->
 <section class="day">
-  <h2>📍 Day 1｜1/24（六）</h2>
-
-  <div class="item" id="hengyu">
-    <strong>11:00 恒瑜家（午餐＋下午茶）</strong><br>
-    各自前往，吃飯聊天休息
-  </div>
-
-  <div class="item" id="weiwei">
-    <strong>15:00 微圍住民宿 Check-in</strong><br>
-    <a class="map-btn" href="https://maps.app.goo.gl/wrhvyvm6R2vgBEGB8?g_st=ipc" target="_blank">
-      🧭 導航到微圍住請按我
-    </a>
-  </div>
-
-  <div class="item" id="zhuangwei">
-    <strong>16:00 壯圍沙丘＋海邊（看龜山島）</strong><br>
-    <a class="map-btn" href="https://maps.app.goo.gl/H8zSyo1i7H5sjc816?g_st=ipc" target="_blank">
-      🧭 導航到壯圍沙丘請按我
-    </a>
-    <div class="rainy">
-      🌧 雨天備案：金車噶瑪蘭威士忌酒廠
-      <a class="map-btn" href="https://maps.app.goo.gl/5RVUVt1PZPzXdgCh6?g_st=ipc" target="_blank">
-        導航
-      </a>
-    </div>
-  </div>
-
-  <div class="item" id="nanqiao">
-    <strong>17:30 南橋282（桌菜晚餐）</strong><br>
-    <a class="map-btn" href="https://maps.app.goo.gl/6vs8sjKvg8sP2ucG6?g_st=ipc" target="_blank">
-      🧭 導航到南橋282請按我
-    </a>
-  </div>
-
-  <div class="item">
-    <strong>20:00 回民宿聊天</strong>
-  </div>
-
-  <div class="item">
-    <strong>23:00 晚安</strong>
-  </div>
+  <h2>📍 第一天｜1/24（六）</h2>
+  <ul class="place-list">
+    <li>🍳 早餐：各自家中吃飽飽</li>
+    <li>🚗 上午行程：新竹出發前往宜蘭</li>
+    <li>🍱 午餐：恒瑜家（午餐＋下午茶）</li>
+    <li>🏠 下午行程：微圍住民宿 Check-in</li>
+    <li>
+      🌊 傍晚行程：壯圍沙丘、海邊看龜山島
+      <div class="rainy">🌧 雨天備案：金車噶瑪蘭威士忌酒廠</div>
+    </li>
+    <li>🍽 晚餐：南橋282（桌菜）</li>
+    <li>💬 晚上：回民宿聊天、休息</li>
+  </ul>
 </section>
 
-<!-- ================= Day 2 ================= -->
+<!-- ================= 第二天 ================= -->
 <section class="day">
-  <h2>📍 Day 2｜1/25（日）</h2>
-
-  <div class="item" id="beihou">
-    <strong>10:30 北后寺</strong><br>
-    <a class="map-btn" href="https://maps.app.goo.gl/EzgYGX99HXV8B9NSA?g_st=ipc" target="_blank">
-      🧭 導航到北后寺請按我
-    </a>
-  </div>
-
-  <div class="item" id="yunqi">
-    <strong>12:00 佛光大學雲起咖啡館</strong><br>
-    <a class="map-btn" href="https://maps.app.goo.gl/1A76sZW1kxBu7mhf7?g_st=ipc" target="_blank">
-      🧭 導航到雲起咖啡請按我
-    </a>
-  </div>
-
-  <div class="item" id="longtan">
-    <strong>13:30 龍潭湖</strong><br>
-    <a class="map-btn" href="https://maps.app.goo.gl/Yy8k25UR1BWuvtSE9?g_st=ipc" target="_blank">
-      🧭 導航到龍潭湖請按我
-    </a>
-    <div class="rainy">
-      🌧 雨天備案：亞典果子工廠
-      <a class="map-btn" href="https://maps.app.goo.gl/DQ3mJ9H51r7d935y8?g_st=ipc" target="_blank">
-        導航
-      </a>
-    </div>
-  </div>
-
-  <div class="item" id="babao">
-    <strong>17:30 八寶冬粉</strong><br>
-    <a class="map-btn" href="https://maps.app.goo.gl/V6ExUtTaeops338eA?g_st=ipc" target="_blank">
-      🧭 導航到八寶冬粉請按我
-    </a>
-  </div>
-
-  <div class="item">
-    <strong>20:00 回民宿聊天</strong>
-  </div>
-
-  <div class="item">
-    <strong>23:00 晚安</strong>
-  </div>
+  <h2>📍 第二天｜1/25（日）</h2>
+  <ul class="place-list">
+    <li>🍳 早餐：民宿早餐</li>
+    <li>🛕 上午行程：北后寺參拜</li>
+    <li>☕ 午餐：佛光大學雲起咖啡館</li>
+    <li>
+      🌿 下午行程：龍潭湖散步
+      <div class="rainy">🌧 雨天備案：亞典果子工廠</div>
+    </li>
+    <li>🍵 下午茶：湖畔茶屋／悠活園區</li>
+    <li>🍜 晚餐：八寶冬粉</li>
+    <li>🚶 晚上：礁溪自由活動或回民宿休息</li>
+  </ul>
 </section>
 
-<!-- ================= Day 3 ================= -->
+<!-- ================= 第三天 ================= -->
 <section class="day">
-  <h2>📍 Day 3｜1/26（一）</h2>
-
-  <div class="item">
-    <strong>08:30 早餐</strong>
-  </div>
-
-  <div class="item">
-    <strong>10:00 出發回新竹</strong>
-  </div>
+  <h2>📍 第三天｜1/26（一）</h2>
+  <ul class="place-list">
+    <li>🍳 早餐：民宿早餐</li>
+    <li>🏡 上午行程：收拾行李，返回新竹</li>
+  </ul>
 </section>
 
 <footer>
-  <p>🚌 行程照表操課，下雨也很優雅</p>
+  <p>❤️ 看這一頁就知道每天做什麼，下雨也不慌</p>
 </footer>
 
 </body>
