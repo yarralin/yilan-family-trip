@@ -3,103 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🧳 新竹大家庭・宜蘭快樂遊</title>
+    <title>新竹大家庭・宜蘭快樂遊</title>
     <style>
         body {
             font-family: 'Noto Serif TC', 'Noto Sans TC', serif;
             background-color: #fdf6f0;
-            background-image: url('https://img.freepik.com/premium-photo/washi-japanese-paper-style-texture-background-fiber-beige-light-pink-paper-texture_463999-6790.jpg');
+            background-image: url('https://media.istockphoto.com/id/1074682564/photo/hand-made-japanese-traditional-paper-washi-texture.jpg?s=612x612&w=0&k=20&c=MJC94Edr6sjLeRovV4jOQ6KbXk8Q-w_0O_iUiXQi6KM=');
             background-size: cover;
             background-attachment: fixed;
+            background-position: center;
             color: #333;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 30px 20px;
-            line-height: 2;
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 2.2;
             min-height: 100vh;
         }
         h1 {
             text-align: center;
-            font-size: 2.8em;
+            font-size: 3em;
             color: #5d4037;
             margin-bottom: 10px;
             font-weight: 700;
-            letter-spacing: 4px;
+            letter-spacing: 5px;
         }
         .date {
             text-align: center;
-            font-size: 2em;
+            font-size: 2.2em;
             color: #8d6e63;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
         .day-section {
-            background-color: rgba(255, 255, 255, 0.85);
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 50px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-            border: 1px solid #e0e0e0;
+            background-color: rgba(255, 255, 255, 0.88);
+            border-radius: 20px;
+            padding: 35px 30px;
+            margin-bottom: 60px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border: 1px solid #e8ded6;
         }
         h2 {
             text-align: center;
-            font-size: 2.4em;
+            font-size: 2.6em;
             color: #6d4c41;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
             position: relative;
         }
         h2::after {
             content: '';
             display: block;
-            width: 80px;
-            height: 2px;
+            width: 100px;
+            height: 3px;
             background: #d7ccc8;
-            margin: 15px auto;
+            margin: 20px auto;
+            border-radius: 2px;
         }
         ul {
             list-style: none;
             padding: 0;
         }
         li {
-            font-size: 1.8em;
-            margin: 25px 0;
+            font-size: 2em;
+            margin: 30px 0;
             padding-left: 10px;
             border-bottom: 1px dotted #c0b0a0;
         }
         .emoji {
-            margin-right: 15px;
-            font-size: 1.2em;
+            margin-right: 20px;
+            font-size: 1.3em;
         }
         .rain {
             color: #455a64;
             font-style: italic;
-            margin-left: 50px;
-            font-size: 0.85em;
+            margin-left: 60px;
+            font-size: 0.8em;
             display: block;
-            margin-top: 8px;
+            margin-top: 10px;
         }
         .footer {
             text-align: center;
-            font-size: 1.6em;
+            font-size: 1.8em;
             color: #6d4c41;
-            margin-top: 60px;
+            margin-top: 80px;
             font-style: italic;
         }
+
+        /* 行動裝置優化 */
         @media (max-width: 768px) {
-            body { padding: 20px 10px; }
-            h1 { font-size: 2.4em; }
-            .date { font-size: 1.8em; }
-            h2 { font-size: 2em; }
-            li { font-size: 1.6em; }
-            .day-section { padding: 20px; }
+            body {
+                padding: 20px 15px;
+            }
+            h1 {
+                font-size: 2.6em;
+                letter-spacing: 3px;
+            }
+            .date {
+                font-size: 1.9em;
+            }
+            .day-section {
+                padding: 25px 20px;
+                margin-bottom: 50px;
+            }
+            h2 {
+                font-size: 2.2em;
+            }
+            h2::after {
+                width: 80px;
+                height: 2px;
+            }
+            li {
+                font-size: 1.8em;
+                margin: 25px 0;
+            }
+            .emoji {
+                margin-right: 15px;
+                font-size: 1.2em;
+            }
+            .rain {
+                margin-left: 50px;
+                font-size: 0.85em;
+            }
+            .footer {
+                font-size: 1.6em;
+            }
         }
+
         @media (max-width: 480px) {
-            li { font-size: 1.5em; }
+            h1 {
+                font-size: 2.3em;
+            }
+            .date {
+                font-size: 1.7em;
+            }
+            h2 {
+                font-size: 2em;
+            }
+            li {
+                font-size: 1.6em;
+            }
+            .rain {
+                margin-left: 40px;
+            }
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>🧳 新竹大家庭・宜蘭快樂遊</h1>
+    <h1>新竹大家庭・宜蘭快樂遊</h1>
     <p class="date">2026 / 1 / 24（六）– 1 / 26（一）</p>
 
     <div class="day-section">
