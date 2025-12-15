@@ -20,21 +20,41 @@ header {
   overflow: hidden;
 }
 
-/* 雲霧動畫 */
-header::after {
-  content: '';
+/* 雲朵動畫容器 */
+.cloud, .bird {
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(rgba(255,255,255,0.4) 20%, transparent 60%);
-  animation: moveClouds 30s linear infinite;
+  top: 0;
+  left: -100px;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-@keyframes moveClouds {
-  0% { transform: translate(0,0); }
-  100% { transform: translate(50px,20px); }
+/* 雲朵樣式 */
+.cloud {
+  width: 80px;
+  height: 50px;
+  background-image: url('cloud.png'); /* 透明背景雲圖 */
+  animation: moveCloud 60s linear infinite;
+}
+
+/* 飛鳥樣式 */
+.bird {
+  width: 40px;
+  height: 30px;
+  top: 30%;
+  background-image: url('bird.png'); /* 透明飛鳥圖 */
+  animation: flyBird 25s linear infinite;
+}
+
+@keyframes moveCloud {
+  0% { transform: translateX(-100px); }
+  100% { transform: translateX(120vw); }
+}
+
+@keyframes flyBird {
+  0% { transform: translateX(-50px) translateY(0); }
+  50% { transform: translateX(120vw) translateY(-10px); }
+  100% { transform: translateX(-50px) translateY(0); }
 }
 
 header h1 {
@@ -62,7 +82,6 @@ header p {
   color: #3f7f9c;
   text-decoration: none;
   font-size: 0.85em;
-  background-color: rgba(255,255,255,0.6);
   position: relative;
   z-index: 1;
 }
@@ -101,19 +120,6 @@ header p {
   align-items: center;
 }
 
-/* 圖示微浮動 */
-.place-list li::before {
-  content: attr(data-icon);
-  display: inline-block;
-  margin-right: 0.5em;
-  animation: floatIcon 3s ease-in-out infinite;
-}
-
-@keyframes floatIcon {
-  0%,100% { transform: translateY(0px); }
-  50% { transform: translateY(-3px); }
-}
-
 /* 導航按鈕 */
 .map-btn {
   margin-left: 0.6em;
@@ -131,10 +137,11 @@ header p {
   background-color: #e1f1f8;
 }
 
-/* 雨天備案 */
+/* 雨天備案換行縮排 */
 .rainy {
+  display: block;
   margin-left: 2.2em;
-  margin-top: 0.4em;
+  margin-top: 0.3em;
   color: #5f9bbc;
   font-style: italic;
   font-size: 0.85em;
