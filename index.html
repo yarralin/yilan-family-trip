@@ -6,120 +6,140 @@
     <title>🧳 新竹大家庭・宜蘭快樂遊</title>
     <style>
         body {
-            font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
-            background-color: #f0f8ff;
+            font-family: 'Noto Serif TC', 'Noto Sans TC', serif;
+            background-color: #fdf6f0;
+            background-image: url('https://img.freepik.com/premium-photo/washi-japanese-paper-style-texture-background-fiber-beige-light-pink-paper-texture_463999-6790.jpg');
+            background-size: cover;
+            background-attachment: fixed;
             color: #333;
             max-width: 900px;
             margin: 0 auto;
-            padding: 20px;
-            line-height: 1.8;
+            padding: 30px 20px;
+            line-height: 2;
+            min-height: 100vh;
         }
         h1 {
             text-align: center;
             font-size: 2.8em;
-            color: #006400;
+            color: #5d4037;
             margin-bottom: 10px;
-        }
-        h2 {
-            text-align: center;
-            font-size: 2.2em;
-            color: #228b22;
-            margin-top: 40px;
-        }
-        h3 {
-            font-size: 1.8em;
-            color: #006400;
-            border-bottom: 3px solid #90ee90;
-            padding-bottom: 10px;
-        }
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        li {
-            margin: 20px 0;
-            font-size: 1.6em;
-            padding: 10px;
-            background-color: #fffacd;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .emoji {
-            font-size: 1.5em;
-            margin-right: 10px;
-        }
-        .rain {
-            color: #4169e1;
-            font-style: italic;
-            margin-left: 30px;
-            font-size: 0.9em;
+            font-weight: 700;
+            letter-spacing: 4px;
         }
         .date {
             text-align: center;
             font-size: 2em;
-            color: #228b22;
+            color: #8d6e63;
+            margin-bottom: 40px;
         }
-        img {
-            width: 100%;
-            max-height: 400px;
-            object-fit: cover;
+        .day-section {
+            background-color: rgba(255, 255, 255, 0.85);
             border-radius: 15px;
-            margin: 20px 0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            padding: 30px;
+            margin-bottom: 50px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            border: 1px solid #e0e0e0;
+        }
+        h2 {
+            text-align: center;
+            font-size: 2.4em;
+            color: #6d4c41;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 2px;
+            background: #d7ccc8;
+            margin: 15px auto;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            font-size: 1.8em;
+            margin: 25px 0;
+            padding-left: 10px;
+            border-bottom: 1px dotted #c0b0a0;
+        }
+        .emoji {
+            margin-right: 15px;
+            font-size: 1.2em;
+        }
+        .rain {
+            color: #455a64;
+            font-style: italic;
+            margin-left: 50px;
+            font-size: 0.85em;
+            display: block;
+            margin-top: 8px;
+        }
+        .footer {
+            text-align: center;
+            font-size: 1.6em;
+            color: #6d4c41;
+            margin-top: 60px;
+            font-style: italic;
         }
         @media (max-width: 768px) {
-            body { padding: 10px; }
+            body { padding: 20px 10px; }
             h1 { font-size: 2.4em; }
-            h2 { font-size: 1.8em; }
-            li { font-size: 1.4em; }
+            .date { font-size: 1.8em; }
+            h2 { font-size: 2em; }
+            li { font-size: 1.6em; }
+            .day-section { padding: 20px; }
+        }
+        @media (max-width: 480px) {
+            li { font-size: 1.5em; }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>🧳 新竹大家庭・宜蘭快樂遊</h1>
     <p class="date">2026 / 1 / 24（六）– 1 / 26（一）</p>
 
-    <h2>📍 第一天｜1/24（六）</h2>
-    <img src="https://www.necoast-nsa.gov.tw/FileArtPic.ashx?id=813&w=600&h=400" alt="壯圍沙丘風景">
-    <img src="https://www.necoast-nsa.gov.tw/FileArtPic.ashx?id=783&w=600&h=400" alt="龜山島海邊景色">
+    <div class="day-section">
+        <h2>📍 第一天｜1/24（六）</h2>
+        <ul>
+            <li><span class="emoji">🍳</span> 早餐：各自家中吃飽飽</li>
+            <li><span class="emoji">🚗</span> 上午行程：新竹出發前往宜蘭</li>
+            <li><span class="emoji">🍱</span> 午餐：恒瑜家（午餐＋下午茶）</li>
+            <li><span class="emoji">🏠</span> 下午行程：微圍住民宿 Check-in</li>
+            <li><span class="emoji">🌊</span> 傍晚行程：壯圍沙丘、海邊看龜山島
+                <span class="rain">🌧 雨天備案：金車噶瑪蘭威士忌酒廠</span>
+            </li>
+            <li><span class="emoji">🍽</span> 晚餐：南橋282（桌菜）</li>
+            <li><span class="emoji">💬</span> 晚上：回民宿聊天、休息</li>
+        </ul>
+    </div>
 
-    <ul>
-        <li><span class="emoji">🍳</span> 早餐：各自家中吃飽飽</li>
-        <li><span class="emoji">🚗</span> 上午行程：新竹出發前往宜蘭</li>
-        <li><span class="emoji">🍱</span> 午餐：恒瑜家（午餐＋下午茶）</li>
-        <li><span class="emoji">🏠</span> 下午行程：微圍住民宿 Check-in</li>
-        <li><span class="emoji">🌊</span> 傍晚行程：壯圍沙丘、海邊看龜山島
-            <div class="rain">🌧 雨天備案：金車噶瑪蘭威士忌酒廠</div>
-        </li>
-        <li><span class="emoji">🍽</span> 晚餐：南橋282（桌菜）</li>
-        <li><span class="emoji">💬</span> 晚上：回民宿聊天、休息</li>
-    </ul>
+    <div class="day-section">
+        <h2>📍 第二天｜1/25（日）</h2>
+        <ul>
+            <li><span class="emoji">🍳</span> 早餐：民宿早餐</li>
+            <li><span class="emoji">🛕</span> 上午行程：北后寺參拜</li>
+            <li><span class="emoji">☕</span> 午餐：佛光大學雲起咖啡館</li>
+            <li><span class="emoji">🌿</span> 下午行程：龍潭湖散步
+                <span class="rain">🌧 雨天備案：亞典果子工廠</span>
+            </li>
+            <li><span class="emoji">🍵</span> 下午茶：湖畔茶屋／悠活園區</li>
+            <li><span class="emoji">🍜</span> 晚餐：八寶冬粉</li>
+            <li><span class="emoji">🚶</span> 晚上：礁溪自由活動或回民宿休息</li>
+        </ul>
+    </div>
 
-    <h2>📍 第二天｜1/25（日）</h2>
-    <img src="https://photo.settour.com.tw/900x600/https://www.settour.com.tw/ss_img/info/location/ILN/N0/ILN0000285/ILN0000285_101443.jpg" alt="北后寺">
-    <img src="https://www.welcometw.com/wp-content/uploads/2021/07/%E9%BE%8D%E6%BD%AD%E6%B9%96%E9%A2%A8%E6%99%AF%E5%8D%80@duffy_lifediary_2-850x650.jpg" alt="龍潭湖風景">
-    <img src="https://travelblog.tw/wp-content/uploads/20201222231414_60.jpg" alt="龍潭湖環湖步道">
-    <img src="https://resize-image.vocus.cc/resize?norotation=true&quality=80&url=https%3A%2F%2Fimages.vocus.cc%2F27b816d4-001a-4996-98e4-2941824017eb.jpg&width=740&sign=6cehwHTaGfET-LmiIb1YrC2DwZPKvaN5Rdc6jE3S0x0" alt="礁溪溫泉街">
+    <div class="day-section">
+        <h2>📍 第三天｜1/26（一）</h2>
+        <ul>
+            <li><span class="emoji">🍳</span> 早餐：民宿早餐</li>
+            <li><span class="emoji">🏡</span> 上午行程：收拾行李，返回新竹</li>
+        </ul>
+    </div>
 
-    <ul>
-        <li><span class="emoji">🍳</span> 早餐：民宿早餐</li>
-        <li><span class="emoji">🛕</span> 上午行程：北后寺參拜</li>
-        <li><span class="emoji">☕</span> 午餐：佛光大學雲起咖啡館</li>
-        <li><span class="emoji">🌿</span> 下午行程：龍潭湖散步
-            <div class="rain">🌧 雨天備案：亞典果子工廠</div>
-        </li>
-        <li><span class="emoji">🍵</span> 下午茶：湖畔茶屋／悠活園區</li>
-        <li><span class="emoji">🍜</span> 晚餐：八寶冬粉（玉仁八寶冬粉）</li>
-        <li><span class="emoji">🚶</span> 晚上：礁溪自由活動或回民宿休息</li>
-    </ul>
-
-    <h2>📍 第三天｜1/26（一）</h2>
-    <ul>
-        <li><span class="emoji">🍳</span> 早餐：民宿早餐</li>
-        <li><span class="emoji">🏡</span> 上午行程：收拾行李，返回新竹</li>
-    </ul>
-
-    <p style="text-align: center; font-size: 1.4em; margin-top: 50px;">大家開心出遊，平安歸來！🚗💨</p>
+    <p class="footer">大家開心出遊，平安歸來！🚗💨</p>
 </body>
 </html>
