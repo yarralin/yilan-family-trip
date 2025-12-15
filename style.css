@@ -154,3 +154,8 @@ footer {
   font-size: 0.8em;
   color: #6d9cb2;
 }
+
+.item strong {
+  font-weight: normal;      /* 移除粗體 */
+  font-family: inherit;     /* 使用與首頁一致字體 */
+}
