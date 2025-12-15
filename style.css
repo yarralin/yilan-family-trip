@@ -1,61 +1,69 @@
+/* ===== 全站基礎 ===== */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC",
                "Hiragino Sans", "Yu Gothic", sans-serif;
-  background-color: #f8f9f7;
+  background-color: #fbfdfc;   /* 更亮的米白 */
   color: #2f3e46;
   line-height: 1.75;
 }
 
-/* Header */
+/* ===== Header ===== */
 header {
-  background-color: #e8edea;
-  padding: 2em 1em 1.6em;
+  background: linear-gradient(
+    to bottom,
+    #eef6f9,   /* 天空淡藍 */
+    #f6fbf8    /* 草地淡綠 */
+  );
+  padding: 2.2em 1em 1.8em;
   text-align: center;
 }
 
 header h1 {
   margin: 0;
-  font-size: 1.55em;
+  font-size: 1.6em;
   font-weight: 500;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
+  color: #2b4a5a;
 }
 
 header p {
-  margin: 0.6em 0 1.2em;
-  color: #6b7c7a;
+  margin: 0.6em 0 1.3em;
+  color: #6a8fa1;
   font-size: 0.9em;
 }
 
-/* 主按鈕 */
+/* ===== 主按鈕 ===== */
 .btn {
   display: inline-block;
-  padding: 0.35em 1.1em;
-  border: 1px solid #b6c4be;
+  padding: 0.4em 1.2em;
+  border: 1px solid #9cc9dd;   /* 淡天空藍 */
   border-radius: 999px;
-  color: #4f6f64;
+  color: #3f7f9c;
   text-decoration: none;
   font-size: 0.85em;
+  background-color: rgba(255,255,255,0.6);
 }
 
 .btn:hover {
-  background-color: #f1f4f2;
+  background-color: #eaf5fb;
 }
 
-/* 每日區塊 */
+/* ===== 每日區塊 ===== */
 .day {
-  padding: 1.4em 1.6em;
-  border-bottom: 1px solid #e1e6e3;
+  padding: 1.6em 1.7em;
+  border-bottom: 1px solid #e4f0f5;
 }
 
+/* Day 標題 */
 .day h2 {
-  font-size: 1.15em;
+  font-size: 1.18em;
   font-weight: 500;
-  margin-bottom: 0.8em;
-  color: #344e41;
+  margin-bottom: 0.9em;
+  color: #3a5f73;   /* 山藍色 */
 }
 
-/* 列表 */
+/* ===== 列表 ===== */
 .place-list {
   list-style: none;
   padding: 0;
@@ -63,22 +71,43 @@ header p {
 }
 
 .place-list li {
-  margin-bottom: 0.6em;
+  margin-bottom: 0.65em;
 }
 
-/* 雨天備案 */
+/* ===== 詳細頁 item ===== */
+.item {
+  margin-bottom: 1.5em;
+}
+
+/* ===== 導航（極簡、清爽） ===== */
+.map-btn {
+  margin-left: 0.6em;
+  padding: 0.1em 0.45em;
+  border: 1px solid #b7dbea;
+  color: #5fa3c4;
+  background-color: transparent;
+  border-radius: 3px;
+  font-size: 0.8em;
+  text-decoration: none;
+}
+
+.map-btn:hover {
+  background-color: #eef7fb;
+}
+
+/* ===== 雨天備案（莫蘭迪藍・斜體） ===== */
 .rainy {
   margin-left: 2.2em;
   margin-top: 0.4em;
-  color: #6b8ba4;
+  color: #7aa7bd;
   font-style: italic;
   font-size: 0.85em;
 }
 
-/* Footer */
+/* ===== Footer ===== */
 footer {
   text-align: center;
-  padding: 1.6em 1em;
+  padding: 1.8em 1em;
   font-size: 0.8em;
-  color: #8a9a9e;
+  color: #8fb3c4;
 }
