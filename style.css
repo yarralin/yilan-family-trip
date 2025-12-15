@@ -3,47 +3,68 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC",
                "Hiragino Sans", "Yu Gothic", sans-serif;
-  background-color: #fdfefc;   /* 米白清新 */
+  background-color: #fdfefc;
   color: #2e4f63;
   line-height: 1.75;
+  overflow-x: hidden;
 }
 
 /* ===== Header ===== */
 header {
-  background: linear-gradient(
-    to bottom,
-    #e6f2f8,   /* 淡藍天空 */
-    #f5faf7    /* 淡綠草地 */
-  );
+  position: relative;
   padding: 2.2em 1em 1.8em;
   text-align: center;
-  box-shadow: inset 0 -1px 0 rgba(128, 180, 200, 0.15); /* 超淡雲霧感 */
+  color: #235b7c;
+  font-weight: 500;
+  background: linear-gradient(to bottom, #e6f2f8, #f5faf7);
+  overflow: hidden;
+}
+
+/* 雲霧動畫 */
+header::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(rgba(255,255,255,0.4) 20%, transparent 60%);
+  animation: moveClouds 30s linear infinite;
+}
+
+@keyframes moveClouds {
+  0% { transform: translate(0,0); }
+  100% { transform: translate(50px,20px); }
 }
 
 header h1 {
   margin: 0;
   font-size: 1.6em;
-  font-weight: 500;
   letter-spacing: 0.06em;
-  color: #235b7c;  /* 再藍一點 */
+  position: relative;
+  z-index: 1;
 }
 
 header p {
   margin: 0.6em 0 1.3em;
   color: #5f8fa0;
   font-size: 0.9em;
+  position: relative;
+  z-index: 1;
 }
 
 /* ===== 主按鈕 ===== */
 .btn {
   display: inline-block;
   padding: 0.4em 1.2em;
-  border: 1px solid #88b7d1;   /* 輕藍 */
+  border: 1px solid #88b7d1;
   border-radius: 999px;
   color: #3f7f9c;
   text-decoration: none;
   font-size: 0.85em;
   background-color: rgba(255,255,255,0.6);
+  position: relative;
+  z-index: 1;
 }
 
 .btn:hover {
@@ -62,8 +83,8 @@ header p {
   font-size: 1.18em;
   font-weight: 500;
   margin-bottom: 0.6em;
-  color: #2f5c7a;   /* 再藍一點 */
-  border-bottom: 1px solid #a3c4d9; /* 湖水線 */
+  color: #2f5c7a;
+  border-bottom: 1px solid #a3c4d9;
   padding-bottom: 0.25em;
 }
 
@@ -76,14 +97,24 @@ header p {
 
 .place-list li {
   margin-bottom: 0.65em;
+  display: flex;
+  align-items: center;
 }
 
-/* 詳細頁 item */
-.item {
-  margin-bottom: 1.5em;
+/* 圖示微浮動 */
+.place-list li::before {
+  content: attr(data-icon);
+  display: inline-block;
+  margin-right: 0.5em;
+  animation: floatIcon 3s ease-in-out infinite;
 }
 
-/* 導航按鈕（極簡 inline） */
+@keyframes floatIcon {
+  0%,100% { transform: translateY(0px); }
+  50% { transform: translateY(-3px); }
+}
+
+/* 導航按鈕 */
 .map-btn {
   margin-left: 0.6em;
   padding: 0.1em 0.45em;
