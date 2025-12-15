@@ -6,32 +6,43 @@
   <title>宜蘭快樂遊｜詳細行程</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* 導航按鈕樣式 */
+    /* ===== 導航按鈕（低存在感美感版） ===== */
     .map-btn {
       display: inline-block;
-      margin-left: 1em; /* 左縮排一格 */
+      margin-left: 1.2em;
       margin-top: 0.3em;
-      padding: 0.3em 0.6em;
-      background-color: #cce4f6; /* 淡藍色 */
-      color: #000;
+      padding: 0.2em 0.5em;
+      border: 1px solid #b8c7d3;     /* 淡莫蘭迪藍灰 */
+      color: #6b8ba4;
+      background-color: transparent;
       text-decoration: none;
-      border-radius: 4px;
-      font-size: 0.9em;
-      transition: background-color 0.3s;
+      border-radius: 3px;
+      font-size: 0.85em;
+      line-height: 1.4;
+      transition: all 0.2s ease;
     }
 
     .map-btn:hover {
-      background-color: #8ec0dc; /* hover 稍深 */
+      background-color: #eef4f8;     /* 非常淡的 hover */
+      border-color: #9fb6c6;
     }
 
-    /* 每日區塊標題加大字 */
+    /* ===== 雨天備案 ===== */
+    .rainy {
+      margin-left: 2em;
+      margin-top: 0.3em;
+      color: #6b8ba4;
+      font-style: italic;
+      font-size: 0.9em;
+    }
+
     .day h2 {
       font-size: 1.3em;
-      margin-bottom: 0.5em;
+      margin-bottom: 0.6em;
     }
 
     .item {
-      margin-bottom: 1em;
+      margin-bottom: 1.3em;
     }
   </style>
 </head>
@@ -48,31 +59,33 @@
 
   <div class="item" id="hengyu">
     <strong>11:00 恒瑜家（午餐＋下午茶）</strong><br>
-    新竹集合，吃飯聊天休息
+    各自前往，吃飯聊天休息
   </div>
 
   <div class="item" id="weiwei">
     <strong>15:00 微圍住民宿 Check-in</strong><br>
     <a class="map-btn" href="https://maps.app.goo.gl/wrhvyvm6R2vgBEGB8?g_st=ipc" target="_blank">
-      🧭 導航到微圍住請按我
+      🧭 導航到微圍住
     </a>
   </div>
 
   <div class="item" id="zhuangwei">
     <strong>16:00 壯圍沙丘＋海邊（看龜山島）</strong><br>
     <a class="map-btn" href="https://maps.app.goo.gl/H8zSyo1i7H5sjc816?g_st=ipc" target="_blank">
-      🧭 導航到壯圍沙丘請按我
-    </a><br>
-    🌧 雨天備案：
-    <a class="map-btn" href="https://maps.app.goo.gl/5RVUVt1PZPzXdgCh6?g_st=ipc" target="_blank">
-      🧭 導航到噶瑪蘭酒廠請按我
+      🧭 壯圍沙丘導航
     </a>
+    <div class="rainy">
+      🌧 雨天備案：金車噶瑪蘭威士忌酒廠
+      <a class="map-btn" href="https://maps.app.goo.gl/5RVUVt1PZPzXdgCh6?g_st=ipc" target="_blank">
+        導航
+      </a>
+    </div>
   </div>
 
   <div class="item" id="nanqiao">
     <strong>17:30 南橋282（桌菜晚餐）</strong><br>
     <a class="map-btn" href="https://maps.app.goo.gl/6vs8sjKvg8sP2ucG6?g_st=ipc" target="_blank">
-      🧭 導航到南橋282請按我
+      🧭 南橋282導航
     </a>
   </div>
 
@@ -92,32 +105,34 @@
   <div class="item" id="beihou">
     <strong>10:30 北后寺</strong><br>
     <a class="map-btn" href="https://maps.app.goo.gl/EzgYGX99HXV8B9NSA?g_st=ipc" target="_blank">
-      🧭 導航到北后寺請按我
+      🧭 北后寺導航
     </a>
   </div>
 
   <div class="item" id="yunqi">
     <strong>12:00 佛光大學雲起咖啡館</strong><br>
     <a class="map-btn" href="https://maps.app.goo.gl/1A76sZW1kxBu7mhf7?g_st=ipc" target="_blank">
-      🧭 導航到雲起咖啡請按我
+      🧭 雲起咖啡館導航
     </a>
   </div>
 
   <div class="item" id="longtan">
     <strong>13:30 龍潭湖</strong><br>
     <a class="map-btn" href="https://maps.app.goo.gl/Yy8k25UR1BWuvtSE9?g_st=ipc" target="_blank">
-      🧭 導航到龍潭湖請按我
-    </a><br>
-    🌧 雨天備案：
-    <a class="map-btn" href="https://maps.app.goo.gl/DQ3mJ9H51r7d935y8?g_st=ipc" target="_blank">
-      🧭 導航到亞典果子工廠請按我
+      🧭 龍潭湖導航
     </a>
+    <div class="rainy">
+      🌧 雨天備案：亞典果子工廠
+      <a class="map-btn" href="https://maps.app.goo.gl/DQ3mJ9H51r7d935y8?g_st=ipc" target="_blank">
+        導航
+      </a>
+    </div>
   </div>
 
   <div class="item" id="babao">
     <strong>17:30 八寶冬粉</strong><br>
     <a class="map-btn" href="https://maps.app.goo.gl/V6ExUtTaeops338eA?g_st=ipc" target="_blank">
-      🧭 導航到八寶冬粉請按我
+      🧭 八寶冬粉導航
     </a>
   </div>
 
@@ -144,7 +159,7 @@
 </section>
 
 <footer>
-  <p>🚌 行程照表操課，開心又安心</p>
+  <p>🚌 行程照表操課，下雨也很優雅</p>
 </footer>
 
 </body>
