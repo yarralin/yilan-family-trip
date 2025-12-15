@@ -25,6 +25,7 @@
 
     /* 雨天備案 */
     .rainy {
+      display: block;
       margin-left: 2.2em;
       margin-top: 0.4em;
       color: #6b8ba4;
@@ -34,6 +35,50 @@
 
     .item {
       margin-bottom: 1.4em;
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC",
+                   "Hiragino Sans", "Yu Gothic", sans-serif;
+      font-weight: normal; /* 移除粗體 */
+    }
+
+    /* Header 雲鳥動畫 */
+    header {
+      position: relative;
+      padding: 2em 1em;
+      text-align: center;
+      background: linear-gradient(to bottom, #e6f2f8, #f5faf7);
+      overflow: hidden;
+    }
+
+    .cloud, .bird {
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    .cloud {
+      width: 80px;
+      height: 50px;
+      background-image: url('cloud.png');
+      animation: moveCloud 60s linear infinite;
+    }
+
+    .bird {
+      width: 40px;
+      height: 30px;
+      top: 30%;
+      background-image: url('bird.png');
+      animation: flyBird 25s linear infinite;
+    }
+
+    @keyframes moveCloud {
+      0% { transform: translateX(-100px); }
+      100% { transform: translateX(120vw); }
+    }
+
+    @keyframes flyBird {
+      0% { transform: translateX(-50px) translateY(0); }
+      50% { transform: translateX(120vw) translateY(-10px); }
+      100% { transform: translateX(-50px) translateY(0); }
     }
   </style>
 </head>
@@ -42,6 +87,11 @@
 <header>
   <h1>詳細行程</h1>
   <a class="btn" href="index.html">回行程總覽</a>
+
+  <!-- 雲鳥動畫 -->
+  <div class="cloud" style="top:10%; animation-duration: 70s;"></div>
+  <div class="cloud" style="top:20%; animation-duration: 90s; left:-150px;"></div>
+  <div class="bird" style="animation-duration: 30s;"></div>
 </header>
 
 <!-- ================= Day 1 ================= -->
@@ -49,16 +99,16 @@
   <h2>⛰️ 第一天｜1/24（六）</h2>
 
   <div class="item">
-    <strong>11:00 恒瑜家（午餐＋下午茶）</strong>
+    11:00 🍎 恒瑜琦韻家（午餐＋下午茶）
   </div>
 
   <div class="item">
-    <strong>15:00 微圍住民宿 Check-in</strong>
+    15:00 🌿 微圍住民宿 Check-in
     <a class="map-btn" href="https://maps.app.goo.gl/wrhvyvm6R2vgBEGB8?g_st=ipc" target="_blank">導航</a>
   </div>
 
   <div class="item">
-    <strong>16:00 壯圍沙丘、海邊看龜山島</strong>
+    16:00 🌿 壯圍沙丘、海邊看龜山島
     <a class="map-btn" href="https://maps.app.goo.gl/H8zSyo1i7H5sjc816?g_st=ipc" target="_blank">導航</a>
     <div class="rainy">
       🌧 雨天備案：金車噶瑪蘭威士忌酒廠
@@ -67,16 +117,16 @@
   </div>
 
   <div class="item">
-    <strong>17:30 南橋282（桌菜晚餐）</strong>
+    17:30 🍎 南橋282（桌菜晚餐）
     <a class="map-btn" href="https://maps.app.goo.gl/6vs8sjKvg8sP2ucG6?g_st=ipc" target="_blank">導航</a>
   </div>
 
   <div class="item">
-    <strong>20:00 回民宿聊天</strong>
+    20:00 🌿 回民宿聊天
   </div>
 
   <div class="item">
-    <strong>23:00 晚安</strong>
+    23:00 🌿 晚安
   </div>
 </section>
 
@@ -85,17 +135,17 @@
   <h2>⛰️ 第二天｜1/25（日）</h2>
 
   <div class="item">
-    <strong>10:30 北后寺</strong>
+    10:30 🌿 北后寺
     <a class="map-btn" href="https://maps.app.goo.gl/EzgYGX99HXV8B9NSA?g_st=ipc" target="_blank">導航</a>
   </div>
 
   <div class="item">
-    <strong>12:00 佛光大學雲起咖啡館</strong>
+    12:00 🍎 佛光大學雲起咖啡館
     <a class="map-btn" href="https://maps.app.goo.gl/1A76sZW1kxBu7mhf7?g_st=ipc" target="_blank">導航</a>
   </div>
 
   <div class="item">
-    <strong>13:30 龍潭湖</strong>
+    13:30 🌿 龍潭湖
     <a class="map-btn" href="https://maps.app.goo.gl/Yy8k25UR1BWuvtSE9?g_st=ipc" target="_blank">導航</a>
     <div class="rainy">
       🌧 雨天備案：亞典果子工廠
@@ -104,16 +154,16 @@
   </div>
 
   <div class="item">
-    <strong>17:30 八寶冬粉</strong>
+    17:30 🍎 八寶冬粉
     <a class="map-btn" href="https://maps.app.goo.gl/V6ExUtTaeops338eA?g_st=ipc" target="_blank">導航</a>
   </div>
 
   <div class="item">
-    <strong>20:00 回民宿聊天</strong>
+    20:00 🌿 回民宿聊天
   </div>
 
   <div class="item">
-    <strong>23:00 晚安</strong>
+    23:00 🌿 晚安
   </div>
 </section>
 
@@ -122,11 +172,11 @@
   <h2>⛰️ 第三天｜1/26（一）</h2>
 
   <div class="item">
-    <strong>08:30 早餐</strong>
+    08:30 🍎 早餐
   </div>
 
   <div class="item">
-    <strong>10:00 出發回新竹</strong>
+    10:00 🌿 出發回新竹
   </div>
 </section>
 
